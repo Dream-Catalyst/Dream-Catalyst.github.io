@@ -187,14 +187,14 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Score distillation sampling (SDS) has emerged as an effective framework in text-driven 3D editing tasks due to its inherent 3D consistency.
-             However, existing SDS-based 3D editing methods suffer from extensive training time and lead to lagging results, primarily because these methods deviate from the sampling dynamics of diffusion models.
+            Score distillation sampling (SDS) has emerged as an effective framework in text-driven 3D editing tasks due to its inherent 3D consistency. 
+            However, existing SDS-based 3D editing methods suffer from extensive training time and lead to low-quality results, primarily
+             because these methods deviate from the sampling dynamics of diffusion models.
               In this paper, we propose DreamCatalyst, a novel framework that interprets SDS-based editing as a diffusion reverse process.
-               This interpretation aims to reduce training time and improve editing quality by considering diffusion sampling dynamics.
-                DreamCatalyst presents two modes:
-                 (1) a faster mode, which edits the NeRF scene in only about 25 minutes, and
-                  (2) a high-quality mode, which produces superior results in less than 70 minutes.
-                   Specifically, our high-quality mode outperforms current state-of-the-art NeRF editing methods both in terms of speed and quality.
+               Our objective function considers the sampling dynamics, thereby the optimization process of DreamCatalyst is similar to the diffusion reverse process in editing tasks.
+                DreamCatalyst aims to reduce training time and improve editing quality.
+                 DreamCatalyst presents two modes: (1) a faster mode, which edits the NeRF scene in only about 25 minutes, and (2) a high-quality mode, which produces superior results in less than 70 minutes.
+                  Specifically, our highquality mode outperforms current state-of-the-art NeRF editing methods both in terms of speed and quality.
           </p>
         </div>
       </div>
