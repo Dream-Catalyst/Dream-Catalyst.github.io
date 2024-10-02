@@ -32,7 +32,7 @@
   <link rel="stylesheet"
         href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   <link rel="stylesheet" href="./static/css/index.css">
-  <link rel="icon" href="./static/images/favicon.svg">
+  <link rel="icon" href="./static/images/dreamcatalyst_icon.svg">
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script defer src="./static/js/fontawesome.all.min.js"></script>
@@ -187,14 +187,17 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Score distillation sampling (SDS) has emerged as an effective framework in text-driven 3D editing tasks due to its inherent 3D consistency. 
-            However, existing SDS-based 3D editing methods suffer from extensive training time and lead to low-quality results, primarily
-             because these methods deviate from the sampling dynamics of diffusion models.
-              In this paper, we propose DreamCatalyst, a novel framework that interprets SDS-based editing as a diffusion reverse process.
-               Our objective function considers the sampling dynamics, thereby the optimization process of DreamCatalyst is an approximation of the diffusion reverse process in editing tasks.
-                DreamCatalyst aims to reduce training time and improve editing quality.
-                 DreamCatalyst presents two modes: (1) a faster mode, which edits the NeRF scene in only about 25 minutes, and (2) a high-quality mode, which produces superior results in less than 70 minutes.
-                  Specifically, our highquality mode outperforms current state-of-the-art NeRF editing methods both in terms of speed and quality.
+            Score distillation sampling (SDS) has emerged as an effective framework in text-driven 3D editing tasks, leveraging diffusion models for 3D consistent editing.
+             However, existing SDS-based 3D editing methods suffer from long training times and produce low-quality results.
+              We identify that the root cause of this performance degradation is their conflict with the sampling dynamics of diffusion models.
+               Addressing this conflict allows us to treat SDS as a diffusion reverse process for 3D editing via sampling from data space.
+                In contrast, existing methods naively distill the score function using diffusion models.
+                 From these insights, we propose DreamCatalyst, a novel framework that considers these sampling dynamics in the SDS framework.
+                  Specifically, we devise the optimization process of our DreamCatalyst to approximate the diffusion reverse process in editing tasks, thereby aligning with diffusion sampling dynamics.
+                   As a result, DreamCatalyst successfully reduces training time and improves editing quality.
+                    Our method offers two modes: (1) a fast mode that edits Neural Radiance Fields (NeRF) scenes approximately 23 times faster than current state-of-the-art NeRF editing methods, and (2) a high-quality mode that produces superior results about 8 times faster than these methods.
+                     Notably, our high-quality mode outperforms current state-of-the-art NeRF editing methods in terms of both speed and quality.
+                      DreamCatalyst also surpasses the state-of-the-art 3D Gaussian Splatting (3DGS) editing methods, establishing itself as an effective and model-agnostic 3D editing solution.
           </p>
         </div>
         <hr class="solid">
